@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Interaktif</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Judul Utama -->
+        <h2>Halo besti!! 😚</h2>
+        
+        <!-- Sub-Judul (Keterangan di bawah judul) -->
+        <h4>Apakah Aghni merupakan orang paling cantik sedunia akhirat?</h4>
+        
+        <!-- Pilihan Tombol berada di paling bawah -->
+        <div class="buttons">
+            <button class="yes-button" onclick="handleYesClick()">Iyaa</button>
+            <button class="no-button" onclick="handleNoClick()">Nggak</button>
+        </div>
+    </div>
+
+    <!-- Variabel teks untuk fungsi JavaScript -->
+    <script>
+        let messageIndex = 0;
+        const messages = [
+            "Yakin nggak?",
+            "Pikirkan lagi dong...",
+            "Nanti nyesel lho!",
+            "Pliss klik yang kiri aja ❤️",
+            "Jangan kejam begitu 😭"
+        ];
+    </script>
+
+    <!-- Menghubungkan ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

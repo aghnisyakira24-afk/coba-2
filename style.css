@@ -1,0 +1,90 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: sans-serif; 
+}
+
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background-color: #acd9f3; 
+    padding: 20px; 
+    overflow-x: hidden; 
+}
+
+.container { 
+    text-align: center; 
+    padding: clamp(24px, 5vw, 40px); 
+    background: rgb(0, 30, 58); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(2, 42, 80, 0.5); 
+    width: 100%; 
+    max-width: 450px; 
+}
+
+/* Style Judul Utama (Lebih menonjol dan berwarna cerah di bg gelap) */
+h2 { 
+    color: #4cc9f0; 
+    margin-bottom: 12px; /* Jarak dekat ke sub-judul */
+    font-size: clamp(22px, 5vw, 28px); 
+    font-weight: bold;
+}
+
+/* Style Sub-Judul (Lebih tipis dan ukuran lebih kecil) */
+h4 { 
+    color: #a2c4c9; 
+    margin-bottom: 32px; /* Jarak lebih renggang sebelum masuk ke area tombol */
+    font-size: clamp(14px, 3.8vw, 16px); 
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* Wadah Tombol Pilihan di Paling Bawah */
+.buttons { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    flex-direction: row; 
+    position: relative;
+    min-height: 120px; /* Ruang vertikal aman untuk pembesaran tombol YES */
+}
+
+button { 
+    padding: 12px 28px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: clamp(14px, 3.5vw, 16px); 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: all 0.2s ease-in-out; 
+    max-width: 100%; 
+    white-space: normal; 
+    word-wrap: break-word;
+}
+
+.yes-button { 
+    background-color: #4cc9f0; 
+    color: rgb(2, 32, 56); 
+    z-index: 2; 
+}
+
+.no-button { 
+    background-color: #0c0038; 
+    color: rgb(129, 171, 250); 
+}
+
+/* Optimasi Tampilan untuk Layar HP */
+@media (max-width: 480px) {
+    .buttons {
+        flex-direction: column; 
+        gap: 12px;
+    }
+    
+    button {
+        width: 100%; 
+    }
+}

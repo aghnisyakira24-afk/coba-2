@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeeay! 🥰❤️</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4ab4e6;
+            overflow: hidden;
+            text-align: center;
+        }
+        .success-container {
+            padding: 30px;
+            background: rgb(4, 109, 230);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(15, 1, 80, 0.651);
+            max-width: 450px;
+            width: 90%;
+            z-index: 10;
+        }
+        .gif-container img { width: 100%; max-width: 200px; border-radius: 15px; margin-bottom: 20px; }
+        h1 { color: #030235; font-size: 28px; margin-bottom: 10px; }
+        p { color: #030235; font-size: 16px; }
+        .heart { position: absolute; color: #6490e2; font-size: 24px; animation: floatUp 4s linear infinite; bottom: -50px; }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-105vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-container">
+        <div class="gif-container">
+            <img src="c:\Users\Windows 10\Downloads\PIXECT-20260819133122.jpg" width="150px" height="150px">
+        </div>
+        <h1>Yeeaaayy! I Love You! 💖</h1>
+        <h5>Makasih ya! Aghni emang orang paling cantik sedunia akhirat 🥰✨</h5>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '💙';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
